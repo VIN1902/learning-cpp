@@ -19,7 +19,43 @@ int main(){
     cout<<total<<endl;
 
     // string
-    string myName = "Vikas Indora";
+    string myName = "Vikas Indora \n"; // '\n' is escape-line token
+    string desc = "Know as \"best\" programmer \n"; // '\' is escape-character token, and many more such escape-sequences are there.
+
+    //input
+    string ans;
+    cout<<"is your name "<< myName<<" correct? \n";
+    getline(cin, ans);
+    cout<<"you chose "<<ans<<endl;
+
+    cout<<"are you new to programming? \n";
+    cin >> ans;
+    cout<<"you chose "<<ans<<endl;
 
     return 0;
 }
+
+/*
+Dataypes:
+1. Primitives (in-built to cpp language direct support, fundametal to build more complex ones)
+    - int
+    - float
+    - double
+    - char
+    - boolean
+    - void: means empty is cpp. think of fetching temperature from a server, you won't fetch 0 or undefined, but if you didn't get any temp at all then its said to be null/empty/void.
+
+2. Derived (combining or modifying the primitive ones)
+    - array
+    - string
+    - function
+    - pointers
+    - reference
+
+3. User-defined (modeled by programmer to signify real-world entity)
+    - structure (think of bank form)
+    - enum
+    - union
+    - class
+    - typedef
+*/
