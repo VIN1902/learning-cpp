@@ -6,7 +6,7 @@ int main(){
     int teaLeaves = 5;
     float waterTemperature = 100.38;
     double price = 312.321323987;
-    char teaGrade = 'A';
+    char teaGrade = 'A'; // always with single quotes
     bool isTeaReady = false;
 
     cout << isTeaReady << endl; // 0
@@ -18,7 +18,7 @@ int main(){
     int total = teaLeaves * (int)price;
     cout<<total<<endl;
 
-    // string
+    // string - always with double quotes
     string myName = "Vikas Indora \n"; // '\n' is escape-line token
     string desc = "Know as \"best\" programmer \n"; // '\' is escape-character token, and many more such escape-sequences are there.
 
