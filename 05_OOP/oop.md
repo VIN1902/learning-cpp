@@ -7,3 +7,13 @@
     - all the variables declared inside a class.
 - Methods
     - all the functions declared and defined inside a class.
+
+# Objects
+- access the attributes and methods using '.' notation.
+
+# Constructor
+- whenever object is made constructor is called automatically.
+- doesn't take any datatype specification during declaration.
+- uses exact name of class.
+- there exists a base constructor if you don't make any which is made by compiler. but you can make your own and override it.
+- default, parameter, copy, destructor.
