@@ -18,8 +18,31 @@
 - there exists a base constructor if you don't make any which is made by compiler. but you can make your own and override it.
 - default, parameter, copy, destructor.
 
-# Friend keyword
-- a friend class can acces the private and protected members of other classes.
-
-# Encapsulation
-- putting data in capsule (container) to hide them direct access.
+# OOP core ideologies
+- bundle of ideas and practices.
+1. Encapsultion
+- data hiding and bundling; bundle the members of entity (data & methods) into a class and control thier access from outside.
+- focus on how the data is hidden by controlling access.
+- concepts:
+    - basic class and objects
+    - access modifiers
+        - public, private, protected
+    - getter and setter
+        - special methods that only act as a way to provide everyone restricted (not full) access to private members. prevent direct access/modification of sensitive members.
+2. Abstraction
+- hiding implementation details. structure is important rather than full implementation.
+- focus on what details are hidden in object.
+- seperate the concers into layers, not one thing doing all.
+- concepts:
+    - abstract classes
+    - virtual functions
+3. Inheritance
+- One class can derive properties and behavior from another, forming hierarchies.
+- concepts:
+    - derived classes
+    - overriding parent methods
+    - types: single, multiple, virtual, etc.
+4. Polymorphism
+- Ability of different objects to respond to the same function call in different ways.
+- concepts:
+    - function or operator overloading.
