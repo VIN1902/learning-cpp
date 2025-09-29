@@ -28,19 +28,22 @@ class BankForm {
 
         //destructor (if say name attribute was dynamically allocated to heap)
         /*
-        ~Chai(){
+        ~BankForm(){
             remove name;
         }
         */
 
         //copy constructor (if say name attribute was dynamically allocated to heap) - ek baar free krne ke baad you are trying to free it again or access it.
         /*
-       Chai(Chai& xyz){
+       BankForm(BankForm& xyz){
             name = new string(*xyz.name);
             amount = xyz.amount;
             coMembers = xyz.coMembers;
        } 
         */
+
+        // delegation constructor (specify only 1 or two parameters and for rest of the parameters call another constructor)
+        BankForm(string name) : BankForm(name, 2000, {"Ram", "Lakshman"}){};
 
         void displayDetails(){
             cout<<"Account holder name: "<<name<<endl;
@@ -79,6 +82,9 @@ int main(){
     copiedForm.displayDetails(); // the copied instance is unaffected by change in original instance.
 
     printLine();
+
+    BankForm form3("Lakshmi");
+    form3.displayDetails();
 
     return 0;
 }
