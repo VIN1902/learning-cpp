@@ -17,3 +17,9 @@
 - uses exact name of class.
 - there exists a base constructor if you don't make any which is made by compiler. but you can make your own and override it.
 - default, parameter, copy, destructor.
+
+# Friend keyword
+- a friend class can acces the private and protected members of other classes.
+
+# Encapsulation
+- putting data in capsule (container) to hide them direct access.

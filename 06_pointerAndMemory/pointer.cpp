@@ -3,12 +3,6 @@ Array - continous memory location: visualize it like randomly data kept anywhere
 */
 
 /*
-Pointer is just a variable that stores memory addresses in integer format.
-'*' is like datatype of variable (int,string,etc)
-'&' is like value of variable (69, "Vikas", etc)
-*/
-
-/*
 Heap is dynamic memory where allocation and de-allocation is handled by programmer. Dynamically grows the space required to store data by requesting it from computer's main memory.
 Stack is memory where by defualt all languages work and the existence of stuff (variable, funcitons, etc) is auto-deleted when execution ends. Fixed memory space where you can store a pre-defined amount of data.
 */
