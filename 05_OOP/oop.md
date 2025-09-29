@@ -37,7 +37,12 @@
 - seperate the concers into layers, not one thing doing all.
 - concepts:
     - abstract classes
+        - if a class consists of atleast 1 virtual function. meaning class doesn't has details of implementation just an overview.
+        - usually this class doesn't have its own instance, its expected that another derived class with all the definations will have its objects.
     - virtual functions
+        - the function doesn't have any implementation at that moment, its just for conveying the idea at a broad level.
+        - any derived class must define the virtual functions of parent class.
+        - '= 0' is just syntax to convey that there's no implementation. it has nothing to do with assignment operator.
 3. Inheritance
 - One class can derive properties and behavior from another, forming hierarchies.
 - concepts:
