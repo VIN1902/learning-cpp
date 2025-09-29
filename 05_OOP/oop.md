@@ -21,7 +21,7 @@
 # OOP core ideologies
 - bundle of ideas and practices.
 1. Encapsultion
-- data hiding and bundling; bundle the members of entity (data & methods) into a class and control thier access from outside.
+- data hiding and bundling; bundle the members of entity (data & methods) into a class and control thier direct access from outside.
 - focus on how the data is hidden by controlling access.
 - concepts:
     - basic class and objects
@@ -29,6 +29,8 @@
         - public, private, protected
     - getter and setter
         - special methods that only act as a way to provide everyone restricted (not full) access to private members. prevent direct access/modification of sensitive members.
+    - friend functions/classes
+        - expose private and protected members to only those declared as friends to the class and not to everyone like in cases above.
 2. Abstraction
 - hiding implementation details. structure is important rather than full implementation.
 - focus on what details are hidden in object.
