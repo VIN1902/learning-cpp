@@ -15,28 +15,53 @@ class Tea {
         virtual void prepIngredients() = 0; // pure virtual function, presence of even one of this makes this class an abstract class
         virtual void brewTea() = 0;
         virtual void serveTea() = 0;
+
+        void makeTea(){
+            prepIngredients();
+            brewTea();
+            serveTea();
+        }
 };
 
-class Chai : public Tea{ // chai is a derived class inheriting from tea class
+class MasalaChai : public Tea{ // This class is a derived class inheriting from tea class
     public:
         void prepIngredients() override { // override keyword to connect it to virtual functions of abstract class.
-            cout<<"Add leaves, water, spices and gas."<<endl;
+            cout<<"Add leaves, water, spices, milk and gas."<<endl;
         }
         void brewTea() override {
-            cout<<"Brew tea in utensil with all the preped ingredients."<<endl;
+            cout<<"Brew tea in dolchi with all the preped ingredients."<<endl;
         }
         void serveTea() override {
-            cout<<"Serve the tea."<<endl;
+            cout<<"Serve the tea hot in indian-glass."<<endl;
+        }
+
+};
+
+class LemonTea : public Tea{
+    public:
+        void prepIngredients() override {
+            cout<<"Add leaves, water, lemon and gas. No milk needed."<<endl;
+        }
+        void brewTea() override {
+            cout<<"Brew tea in any container with all the preped ingredients."<<endl;
+        }
+        void serveTea() override {
+            cout<<"Serve the tea hot or cold in british-cup."<<endl;
         }
 
 };
 
 int main(){
 
-    Chai cup1;
-    cup1.prepIngredients();
-    cup1.brewTea();
-    cup1.serveTea();
+    MasalaChai cup1;
+    cup1.makeTea();
+    // makeTea() was never implemented by me but it was abstracted from me by programmers of original Tea class and I just had to define the specified 3 methods for different use-cases as told to me by other developer.
+    // same flow is used in IOS apps, where other developer are programmers of say a camera class and they give me few methods to define and another main method is abstracted from me and I just have to call it.
+
+    cout<<"\t-------------------------- \n";
+
+    LemonTea cup2;
+    cup2.makeTea();
 
     return 0;
 }
@@ -45,7 +70,7 @@ int main(){
 Why even use OOP in a program like this:
 
 1. You have variations of the same “thing”
-Suppose you want GreenTea, BlackTea, MasalaChai, etc. Each has different prep/brewing steps, but all share the same “tea-making” flow. With OOP, you define the abstract steps once in the base Tea class, then override only the parts that differ.
+Suppose you want LemonTea, BlackTea, MasalaChai, etc. Each has different prep/brewing steps, but all share the same “tea-making” flow. With OOP, you define the abstract steps once in the base Tea class, then override only the parts that differ.
 Without OOP, you’d repeat code or juggle if/else blocks.
 
 2. You want extendability without touching old code
