@@ -42,7 +42,8 @@
     - virtual functions
         - the function doesn't have any implementation at that moment, its just for conveying the idea at a broad level.
         - any derived class must define the virtual functions of parent class.
-        - '= 0' is just syntax to convey that there's no implementation. it has nothing to do with assignment operator.
+        - '= 0' is just syntax for pure-virtual funcitons to convey that there's no implementation. it has nothing to do with assignment operator.
+        - you can define a virtual function in base class, but point of any virtual function is that its expected it will be overrided in derived class.
 3. Inheritance
 - One class can derive properties and behavior from another, forming hierarchies.
 - concepts:
