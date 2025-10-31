@@ -67,3 +67,23 @@ int& ref = x;
 - So & always means 'address' but in different context. Similary * always means 'pointer' but in different context.
 - In expressions, * derefrences value stored at address.
 - In declarations, * makes a variable a pointer to store address.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int a = 10;
+
+    int b = a;
+    cout<<&b <<" has "<<b <<" and "<<&a<<" has "<<a<<endl;
+    // 0x7ffdc5921e30 has 10 and 0x7ffdc5921e34 has 10
+    
+    int &c = a;
+    cout<<&c <<" has "<<c <<" and "<<&a<<" has "<<a<<endl;
+    // 0x7ffdc5921e34 has 10 and 0x7ffdc5921e34 has 10
+
+    return 0;
+}
+```
